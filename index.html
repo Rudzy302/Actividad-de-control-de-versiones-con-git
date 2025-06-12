@@ -6,7 +6,6 @@
     <title>Tu Espacio Bonito</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos Generales */
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -14,6 +13,15 @@
             background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-content-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
@@ -23,7 +31,6 @@
             padding: 20px 0;
         }
 
-        /* Encabezado */
         header {
             background-color: #fff;
             padding: 20px 0;
@@ -44,7 +51,6 @@
             margin-top: 10px;
         }
 
-        /* Sección de Héroe/Destacado */
         .hero {
             background: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
@@ -80,7 +86,6 @@
             background-color: #e6b800;
         }
 
-        /* Sección de Contenido con Columnas */
         .content-section {
             display: flex;
             flex-wrap: wrap;
@@ -106,8 +111,8 @@
 
         .content-card img {
             max-width: 100%;
-            height: 200px; /* Altura fija para las imágenes */
-            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+            height: 200px;
+            object-fit: cover;
             border-radius: 5px;
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -125,13 +130,11 @@
             color: #666;
         }
 
-        /* Pie de Página */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 30px 0;
-            margin-top: 50px;
         }
 
         footer p {
@@ -139,7 +142,6 @@
             font-size: 0.9em;
         }
 
-        /* Responsividad */
         @media (max-width: 768px) {
             .hero h2 {
                 font-size: 2.5em;
@@ -160,49 +162,50 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Bienvenido a Tu Espacio</h1>
-            <p>Un lugar para la inspiración y la creatividad</p>
-        </div>
-    </header>
+    <div class="main-content-wrapper">
+        <header>
+            <div class="container">
+                <h1>Bienvenido a Tu Espacio</h1>
+                <p>Un lugar para la inspiración y la creatividad</p>
+            </div>
+        </header>
 
-    <div class="hero">
+        <div class="hero">
+            <div class="container">
+                <h2>Crea, Explora, Disfruta</h2>
+                <p>Este es tu lienzo en blanco. Puedes llenarlo con tus ideas, proyectos, o lo que más te apasione.</p>
+                <a href="#about" class="btn">Empieza Ahora</a>
+            </div>
+        </div>
+
         <div class="container">
-            <h2>Crea, Explora, Disfruta</h2>
-            <p>Este es tu lienzo en blanco. Puedes llenarlo con tus ideas, proyectos, o lo que más te apasione.</p>
-            <a href="#about" class="btn">Empieza Ahora</a>
+            <section class="content-section">
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1518779578619-389d3a4b6c32?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paisaje Urbano">
+                    <h3>Tu Título Aquí</h3>
+                    <p>Aquí puedes escribir sobre un tema que te interese. Describe algo que te apasione, un proyecto, o una idea. Sé conciso pero informativo.</p>
+                </div>
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46487e47a6b7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Naturaleza">
+                    <h3>Otra Idea Genial</h3>
+                    <p>Usa este espacio para desarrollar otra sección de tu contenido. Puedes hablar de un hobby, un viaje, o cualquier cosa que quieras compartir.</p>
+                </div>
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1542435503-9efc86292416?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Arte Abstracto">
+                    <h3>Inspiración Diaria</h3>
+                    <p>Este es el lugar perfecto para una cita inspiradora, un pensamiento profundo o un llamado a la acción. Hazlo tuyo.</p>
+                </div>
+            </section>
+
+            <section id="about" style="text-align: center; padding: 40px 0;">
+                <h2>Sobre Esta Página</h2>
+                <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">
+                    Esta página fue diseñada para ser un punto de partida para tus ideas. Puedes modificar el texto, las imágenes y los colores para que se adapte
+                    perfectamente a tu estilo y propósito. ¡Diviértete personalizándola!
+                </p>
+            </section>
         </div>
     </div>
-
-    <div class="container">
-        <section class="content-section">
-            <div class="content-card">
-                <img src="https://images.unsplash.com/photo-1518779578619-389d3a4b6c32?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paisaje Urbano">
-                <h3>Tu Título Aquí</h3>
-                <p>Aquí puedes escribir sobre un tema que te interese. Describe algo que te apasione, un proyecto, o una idea. Sé conciso pero informativo.</p>
-            </div>
-            <div class="content-card">
-                <img src="https://images.unsplash.com/photo-1506744038136-46487e47a6b7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Naturaleza">
-                <h3>Otra Idea Genial</h3>
-                <p>Usa este espacio para desarrollar otra sección de tu contenido. Puedes hablar de un hobby, un viaje, o cualquier cosa que quieras compartir.</p>
-            </div>
-            <div class="content-card">
-                <img src="https://images.unsplash.com/photo-1542435503-9efc86292416?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Arte Abstracto">
-                <h3>Inspiración Diaria</h3>
-                <p>Este es el lugar perfecto para una cita inspiradora, un pensamiento profundo o un llamado a la acción. Hazlo tuyo.</p>
-            </div>
-        </section>
-
-        <section id="about" style="text-align: center; padding: 40px 0;">
-            <h2>Sobre Esta Página</h2>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">
-                Esta página fue diseñada para ser un punto de partida para tus ideas. Puedes modificar el texto, las imágenes y los colores para que se adapte
-                perfectamente a tu estilo y propósito. ¡Diviértete personalizándola!
-            </p>
-        </section>
-    </div>
-
     <footer>
         <div class="container">
             <p>&copy; 2025 Tu Nombre o Proyecto. Todos los derechos reservados.</p>
